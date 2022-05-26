@@ -1,0 +1,187 @@
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 57vw;
+      grid-template-columns: 1fr 57vw;
+  min-height: 700px;
+}
+
+.txt-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.txt-side > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.txt-side > * > :first-child {
+  margin-right: 40px;
+}
+
+.txt-side > * > :nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+}
+
+.txt-side > * > :nth-child(2) > * {
+  width: 315px;
+}
+
+.txt-side > * > :nth-child(2) h1 {
+  max-width: 500px;
+  margin: 20px 0px;
+}
+
+.txt-side > * > :nth-child(2) .desc {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.txt-side > * > :nth-child(2) .cart-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.txt-side > * > :nth-child(2) .cart-add {
+  cursor: pointer;
+}
+
+.txt-side > * > :nth-child(2) .price {
+  font-size: 28px;
+}
+
+.txt-side > * > :nth-child(2) .price > :nth-child(2) {
+  color: #ff360a;
+  font-weight: 900;
+  font-family: "Nexa Black";
+}
+
+.img-side {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+
+.bg-img {
+  width: 100%;
+}
+
+.slider-wrapper {
+  width: 60px;
+  height: 175px;
+  border-left: 1px solid #d1d1d6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+
+.slider-wrapper .slider {
+  width: 3px;
+  height: 50px;
+  background-color: #000000;
+  display: block;
+  -webkit-transform: translateX(-70%);
+          transform: translateX(-70%);
+  position: absolute;
+  -webkit-transition: top 1s;
+  transition: top 1s;
+}
+
+.slider-wrapper > *:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 20px;
+  padding: 15px 0px;
+}
+
+.slider-wrapper > *:nth-child(2) p {
+  margin: 0px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.slider-wrapper > *:nth-child(2) .focus {
+  font-size: 22px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.socials {
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transform: translateY(120%);
+          transform: translateY(120%);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.socials svg {
+  width: 20px;
+}

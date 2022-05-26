@@ -1,0 +1,120 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr 57vw;
+  min-height: 700px;
+}
+
+.txt-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  & > * {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  & > * > :first-child {
+    margin-right: 40px;
+  }
+
+  & > * > :nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+    & > * {
+      width: 315px;
+    }
+    h1 {
+      max-width: 500px;
+      margin: 20px 0px;
+    }
+    .desc {
+      color: rgba(0, 0, 0, 0.6);
+    }
+    .cart-price {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cart-add {
+      cursor: pointer;
+    }
+    .price {
+      font-size: 28px;
+      & > :nth-child(2) {
+        color: #ff360a;
+        font-weight: 900;
+        font-family: "Nexa Black";
+      }
+    }
+  }
+}
+
+.img-side {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+.bg-img {
+  width: 100%;
+}
+
+.slider-wrapper {
+  width: 60px;
+  height: 175px;
+  // background-color: #d1d1d6;
+  border-left: 1px solid #d1d1d6;
+
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  .slider {
+    width: 3px;
+    height: 50px;
+    background-color: #000000;
+    display: block;
+    transform: translateX(-70%);
+    position: absolute;
+    transition: top 1s;
+  }
+
+  & > *:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20px;
+    padding: 15px 0px;
+    p {
+      margin: 0px;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+      transition: all 1s;
+    }
+    .focus {
+      font-size: 22px;
+      font-weight: 800;
+      color: #000000;
+    }
+  }
+}
+
+.socials {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateY(120%);
+  color: rgba(0, 0, 0, 0.6);
+  svg {
+    width: 20px;
+  }
+}
