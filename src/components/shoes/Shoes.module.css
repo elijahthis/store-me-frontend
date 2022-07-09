@@ -1,0 +1,34 @@
+.ShoeBody {}
+
+.shoesFlex {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3%;
+}
+
+
+.ShoeCard {
+    background-color: #fff;
+    /* max-width: 400px; */
+    width: 30%;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.ShoeCard img {
+    width: 100%;
+}
+
+.ShoeCard__info {
+    padding: 1rem;
+}
+
+.ShoeCard__info>* {
+    margin-bottom: 0.5rem;
+}
+
+/* .ShoeCard__info>.desc {
+    color: rgba(0, 0, 0, 0.6);
+} */

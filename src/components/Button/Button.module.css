@@ -1,0 +1,56 @@
+.Button__primary {
+    font-family: "Nexa Regular";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    cursor: pointer;
+
+    padding: 16px 42px;
+    background-color: rgb(255, 54, 10);
+    color: #ffffff;
+    border: 1px solid rgb(255, 54, 10);
+    display: inline-block;
+    transition: opacity 0.3s;
+
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.7rem;
+
+}
+
+.Button__primary:hover {
+    opacity: 0.5;
+}
+
+
+.Button__secondary {
+    font-family: "Nexa Regular";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    cursor: pointer;
+
+    padding: 16px 42px;
+    background-color: transparent;
+    color: rgb(255, 54, 10);
+    border: 1px solid;
+    display: inline-block;
+    transition: opacity 0.3s;
+
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.Button__secondary:hover {
+    opacity: 0.5;
+}
+
+.Button__disabled {
+    opacity: 0.3 !important;
+}

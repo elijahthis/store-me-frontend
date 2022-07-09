@@ -49,7 +49,7 @@ header > :nth-child(2) {
 }
 
 header .icons {
-  width: 120px;
+  width: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,6 +60,9 @@ header .icons {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .icons svg {
@@ -73,7 +76,7 @@ header .icons > * {
 header .poptions {
   position: absolute;
   padding-left: 0px;
-  left: calc(-50% - 15px);
+  left: calc(-80% - 15px);
   background-color: #ffffff;
   padding: 15px;
   margin: 0px;
@@ -89,7 +92,7 @@ header .poptions a {
 
 header .poptions li {
   list-style-type: none;
-  text-align: center;
+  text-align: left;
   line-height: 25px;
   cursor: pointer;
 }
@@ -123,4 +126,8 @@ header .poptions li {
 
 .search-form input[type="search"]:focus {
   outline: none;
+}
+
+.cart-wrapper {
+  cursor: pointer;
 }

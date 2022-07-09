@@ -1,3 +1,15 @@
 body {
   background-color: #f6f6fc;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.main-body {
+  padding: 3rem 4.375rem;
+  min-height: calc(100vh - 74px);
+}

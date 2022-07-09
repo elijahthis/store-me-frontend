@@ -67,6 +67,7 @@ main {
 
 .txt-side > * > :nth-child(2) .desc {
   color: rgba(0, 0, 0, 0.6);
+  margin: 1rem 0;
 }
 
 .txt-side > * > :nth-child(2) .cart-price {
@@ -184,4 +185,22 @@ main {
 
 .socials svg {
   width: 20px;
+}
+
+.sm-arrow {
+  cursor: pointer;
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
