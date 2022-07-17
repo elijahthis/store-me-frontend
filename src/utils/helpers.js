@@ -13,3 +13,9 @@ export const getTotalPrice = (cart) => {
     }
     return total;
 };
+
+export const inputFunc = (ev, formDataObj, setFormDataObj) => {
+    const name = ev.target.name;
+    const newValue = ev.target.value;
+    setFormDataObj({ ...formDataObj, [name]: newValue });
+};

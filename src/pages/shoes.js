@@ -1,13 +1,7 @@
-import Navbar from "../components/Navbar";
 import ShoeBody from "../components/shoes/ShoeBody";
 
 const Shoes = () => {
-    return (
-        <>
-            <Navbar />
-            <ShoeBody />
-        </>
-    );
+    return <ShoeBody />;
 };
 
 export default Shoes;

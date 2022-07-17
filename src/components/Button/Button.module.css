@@ -16,6 +16,8 @@
     display: inline-flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     gap: 0.7rem;
 
 }
@@ -43,6 +45,8 @@
     display: inline-flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     gap: 0.5rem;
 
 }

@@ -15,7 +15,7 @@ header {
     position: sticky;
     top: 0;
     background-color: #ffffff;
-    z-index: 3;
+    z-index: 300;
 
     & > :nth-child(2) {
         display: flex;

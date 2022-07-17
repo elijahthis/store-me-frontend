@@ -60,6 +60,10 @@ const Navbar = () => {
                     .pop-price {
                         color: rgb(255, 54, 10);
                     }
+                    .cartItem:hover {
+                        // background-color: rgba(0,0,0,0.2);
+                        cursor: pointer;
+                    }
                 `}
             </style>
             <header>
@@ -102,7 +106,14 @@ const Navbar = () => {
                                     </Popover.Header>
                                     <Popover.Body>
                                         {cart?.map((item) => (
-                                            <div className="pb-2 mb-2 border-bottom">
+                                            <div
+                                                className="pb-2 mb-2 border-bottom cursor-pointer cartItem"
+                                                onClick={() => {
+                                                    navigate(
+                                                        `/view-product/${item?.product?.id}`
+                                                    );
+                                                }}
+                                            >
                                                 <img
                                                     src={item?.product?.image}
                                                     alt=""

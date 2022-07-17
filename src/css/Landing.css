@@ -204,3 +204,7 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+.sm-arrow p {
+  margin-bottom: 0;
+}

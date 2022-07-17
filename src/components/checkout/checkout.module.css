@@ -1,0 +1,70 @@
+.bigCheckoutWrapper {
+    /* display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2.5rem; */
+    margin-top: 1.5rem;
+}
+
+.formGroup {
+    width: 100%;
+    margin-bottom: 3rem;
+    /* border: 1px solid #1a1a1a; */
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 4rem;
+}
+
+form {
+    padding: 1rem 0;
+}
+
+label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+input {
+    width: 100%;
+    padding: 1rem 0;
+    padding-bottom: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    transition: border 0.4s;
+}
+
+input:focus-visible {
+    outline: none;
+    border-bottom: 2px solid rgb(255, 54, 10);
+
+}
+
+input[type="submit"] {
+    background-color: rgb(255, 54, 10);
+    color: #fafafa;
+    border: 0;
+    padding-bottom: 1rem;
+}
+
+.tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.tabs>div {
+    display: grid;
+    place-items: center;
+    padding: 1rem 3rem;
+    border: 2px solid;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.4s;
+    /*  */
+}
+
+.tabs>div:hover {
+    color: #fafafa;
+    background-color: rgba(255, 54, 10, 0.85);
+}

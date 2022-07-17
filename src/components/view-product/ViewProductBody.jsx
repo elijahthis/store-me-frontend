@@ -6,104 +6,35 @@ import { sizeList } from "../../constants";
 import Button from "../Button";
 import styles from "./Product.module.css";
 import { BsSuitHeart, BsSuitHeartFill } from "react-icons/bs";
+import useCart from "../../hooks/useCart";
+import useWishList from "../../hooks/useWishList";
 
 const ViewProductBody = () => {
     const { id } = useParams(); // get product id
     const navigate = useNavigate();
 
+    const [isSaved, setIsSaved, controlWish] = useWishList(id);
+
+    const [
+        shoeSize,
+        setShoeSize,
+        isCarted,
+        setIsCarted,
+        quantity,
+        setQuantity,
+        controlCart,
+    ] = useCart(id);
+
     // zustand global states
     const allProducts = useGeneralStore((state) => state.allProducts);
-    const { wishList, updateWishList } = useGeneralStore(
-        (state) => ({
-            wishList: state.wishList,
-            updateWishList: state.updateWishList,
-        }),
-        shallow
-    );
-    const { cart, updateCart } = useGeneralStore(
-        (state) => ({
-            cart: state.cart,
-            updateCart: state.updateCart,
-        }),
-        shallow
-    );
 
     // react component states
     const [currentProduct, setCurrentProduct] = useState({});
-    const [shoeSize, setShoeSize] = useState(5);
-    const [isSaved, setIsSaved] = useState(false);
-    const [isCarted, setIsCarted] = useState(false);
-    const [quantity, setQuantity] = useState(1);
 
     useEffect(() => {
         const currentObj = allProducts.find((item) => item.id === id);
         setCurrentProduct(currentObj);
-        console.log(sizeList);
-        const cartIndex = cart.findIndex(
-            (item) => item?.product?.id === currentObj.id
-        );
-
-        if (wishList.includes(currentObj.id)) setIsSaved(true);
-        if (cartIndex !== -1) {
-            setIsCarted(true);
-            setQuantity(cart[cartIndex].qty);
-        }
-    }, []);
-
-    useEffect(() => {
-        console.log(cart);
-    }, [quantity, cart]);
-
-    useEffect(() => {
-        const newList = [...cart];
-        const currentIndex = cart.findIndex((item) => item?.product?.id);
-        if (cart.length > 0) {
-            if (quantity === 0) {
-                const rm = newList.splice(currentIndex, currentIndex + 1);
-                updateCart(newList);
-                setIsCarted(false);
-            } else {
-                newList[currentIndex].qty = quantity;
-                updateCart(newList);
-            }
-        }
-        console.log(currentIndex);
-    }, [quantity]);
-
-    const controlWish = () => {
-        setIsSaved(!isSaved);
-        if (isSaved) {
-            const newList = [...wishList];
-            const wishIndex = newList.findIndex((item) => item === id);
-            const rm = newList.splice(wishIndex, wishIndex + 1);
-            updateWishList(newList);
-        } else {
-            const newList = [...wishList];
-            newList.push(currentProduct.id);
-            updateWishList(newList);
-        }
-    };
-
-    const controlCart = () => {
-        setIsCarted(!isCarted);
-        if (isCarted) {
-            // const newList = [...cart];
-            // const cartIndex = newList.findIndex(
-            //     (item) => item?.product?.id === id
-            // );
-            // const rm = newList.splice(cartIndex, cartIndex + 1);
-            // updateCart(newList);
-        } else {
-            setQuantity(1);
-            const newList = [...cart];
-            newList.push({
-                product: currentProduct,
-                qty: quantity,
-                size: shoeSize,
-            });
-            updateCart(newList);
-        }
-    };
+    }, [allProducts, id]);
 
     return (
         <div className="main-body">
